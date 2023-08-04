@@ -1,0 +1,34 @@
+* {
+  font-family: "JetBrains Mono", monospace;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.inputBlock {
+  margin-bottom: 16px;
+  width: 800px;
+}
+
+.results {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  width: 800px;
+}
+
+.results > div {
+  margin-bottom: 8px;
+  
+}
+
+span {
+  font-style: italic;
+  opacity: 0.5;
+}

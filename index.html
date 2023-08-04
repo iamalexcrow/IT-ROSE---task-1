@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aleksandr Vorona. IT / Rose Task1 </title>
+  <link rel="icon" href="data:;base64,=">
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="inputBlock">
+    <h1>Distance Converter</h1>
+    <label for="inputValue">Value:</label>
+    <input type="number" id="inputValue" placeholder="Enter value" min="0">
+    <label for="inputUnits">From:</label>
+    <select id="inputUnits">
+      <option value="m">m</option>
+      <option value="cm">cm</option>
+      <option value="in">in</option>
+      <option value="ft">ft</option>
+    </select>
+    <label for="outputUnits">To:</label>
+    <select id="outputUnits">
+      <option value="cm">cm</option>
+      <option value="m">m</option>
+      <option value="in">in</option>
+      <option value="ft">ft</option>
+    </select>
+    <button id="convertBtn">Convert</button>
+    <button id="addBtn">Add mm,yd,km</button>
+  </div>
+  <div class="results" id="results">
+    <div id="requestedInput"></div>
+    <div id="requestedOutput"></div>
+    <div id="humanOutput"></div>
+  </div>
+  <script type="module" src="./script.js">
+  </script>
+</body>
+</html>
