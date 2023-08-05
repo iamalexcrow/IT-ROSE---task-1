@@ -1,13 +1,14 @@
 * {
   font-family: "JetBrains Mono", monospace;
+  box-sizing: border-box;
 }
 body {
-  width: 100vw;
-  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 100px;
+  margin: 100px 0 0 0;
 }
 
 .inputBlock {
@@ -19,16 +20,58 @@ body {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  width: 100%;
   width: 800px;
 }
 
 .results > div {
   margin-bottom: 8px;
-  
 }
 
 span {
   font-style: italic;
   opacity: 0.5;
+}
+
+@media screen and (max-width: 900px) {
+  .inputBlock {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+  .results {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .results,
+  .results * {
+    width: auto;
+    max-width: 100%;
+  }
+  .results span {
+    display: inline-block;
+    overflow-wrap: normal;
+    word-break: break-all;
+  }
+  .inputBlock > * {
+    width: auto;
+    max-width: 100%;
+    /* display: block; */
+  }
+
+  .inputBlock > select,
+  .inputBlock > input,
+  .inputBlock > button {
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  body {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  body > * {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
 }
